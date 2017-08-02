@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'login/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+        <link rel="stylesheet" type="text/css" href="{% static 'login/css/animate.css' %}" />
+        <script type="text/javascript" src="{% static 'logic/js/wow.min.js' %}"></script>
+        <title>Eatupz</title>
+        <style>
+        input[type=text] {
+          width: 130px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          background-image: url("{% static 'login/img/searchicon.png' %}");
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+
+          }
+        #searchbar{
+          width: 100%;
+          background-color: #3cb1c5;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #entirewrap{
+          display: none;
+        }
+
+        </style>
+        <script>
+        function showPage() {
+              document.getElementById("loader").style.display = "none";
+              document.getElementById("entirewrap").style.display = "block";
+        }
+        </script>
+
+    </head>
+    <body onload="showPage()">
+      <div id="loader"></div>
+      <div id="entirewrap">
+        <div id="top">
+            <div id="htext">
+              <h1>Restaurants</h1>
+            </div>
+        </div>
+        <div id="searchbar">
+          <form>
+              <input type="text" name="search" placeholder="Search..">
+          </form>
+        </div>
+        <div id="wrapper">
+            <div class="card wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+                <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">4</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>Hotel Grand Palace</h1>
+                        <p class="card-body-header-sentence">
+                            <span></span>9, G.T.Road, New Delhi, Delhi-08<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                        details details details details details details details details
+                        details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 30
+                        <i class="icon icon-comment"></i> 4.8
+                    </div>
+                </div>
+            </div>
+            <div class="card wow slideInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                  <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">5</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>Taj Mahal Hotel</h1>
+                        <p class="card-body-header-sentence">
+                            <span></span>60/67, B.T.Road, Kolkata, Kol-02<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                        details details details details details details details details
+                        details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 25
+                        <i class="icon icon-comment"></i> 4.2
+                    </div>
+                </div>
+            </div>
+            <div class="card wow slideInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">4</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>J.W.Marriot Hotel</h1>
+                        <p class="card-body-header-sentence">
+                           <span></span>32,V.I.P Road, Kolkata, Kol-02<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                      details details details details details details details details
+                      details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 38
+                        <i class="icon icon-comment"></i> 4.5
+                    </div>
+                </div>
+            </div>
+            <div class="card wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+                <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">4</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>Hotel Grand Palace</h1>
+                        <p class="card-body-header-sentence">
+                            <span></span>9, G.T.Road, New Delhi, Delhi-08<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                        details details details details details details details details
+                        details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 30
+                        <i class="icon icon-comment"></i> 4.8
+                    </div>
+                </div>
+            </div>
+            <div class="card wow slideInDown" data-wow-duration="2s" data-wow-delay="0.2s">
+                  <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">5</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>Taj Mahal Hotel</h1>
+                        <p class="card-body-header-sentence">
+                            <span></span>60/67, B.T.Road, Kolkata, Kol-02<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                        details details details details details details details details
+                        details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 25
+                        <i class="icon icon-comment"></i> 4.2
+                    </div>
+                </div>
+            </div>
+            <div class="card wow slideInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                <div class="card-header">
+                    <div class="card-header-mask">
+                        <div class="card-header-date">
+                            <div class="card-header-date-day">4</div>
+                            <div class="card-header-date-month">Star</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-header">
+                        <div class="card-body-header-category">Photo</div>
+                        <h1>J.W.Marriot Hotel</h1>
+                        <p class="card-body-header-sentence">
+                           <span></span>32,V.I.P Road, Kolkata, Kol-02<span></span>
+                        </p>
+                    </div>
+                    <p class="card-body-description">
+                      details details details details details details details details
+                      details details details details details details details details
+                    </p>
+                    <div class="card-body-footer">
+                        <i class="icon icon-like"></i> 38
+                        <i class="icon icon-comment"></i> 4.5
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+        <script>
+        var wow = new WOW(
+            {
+                offset:       10,          // distance to the element when triggering the animation (default is 0)
+              mobile:       true,       // trigger animations on mobile devices (default is true)
+            });
+            wow.init();
+        </script>
+    </body>
+</html>

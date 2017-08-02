@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      {% load static %}
+      <meta name="viewport" content="width=device-width" />
+      <title>Eatupzz</title>
+      <link rel="stylesheet" href="{% static 'login/css/components.css' %}">
+      <link rel="stylesheet" href="{% static 'login/css/responsee.css' %}">
+      <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.theme.css' %}">
+      <link rel="stylesheet" href="{% static 'login/css/template-style.css' %}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="{% static 'login/js/jquery-1.8.3.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/jquery-ui.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/modernizr.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/responsee.js' %}"></script>
+      <!--[if lt IE 9]>
+	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+   </head>
+   <body class="size-1140">
+      <!-- TOP NAV WITH LOGO -->
+      <header>
+         <nav>
+            <div class="line">
+               <div class="top-nav">
+                  <div class="logo hide-l">
+                     <a href="/trip./index">EATUPZZ<br /><strong>LOGO</strong></a>
+                  </div>
+                  <p class="nav-text">Menu</p><!--Responsive title for Nav-->
+                  <div class="top-nav s-12 l-5">
+                     <ul class="right top-ul chevron">
+                        <li><a href="/trip/./index">Home</a>
+                        </li>
+                        <li><a href="/trip/./bevendor">Be A vendor</a>
+                        </li>
+                        <li><a href="/trip/./fooddel">Food Delivery</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="s-12 l-2">
+                     <li class="logo hide-s hide-m">
+                        <a href="/trip/./index">EATUPZZ <br /><strong>LOGO</strong></a>
+                     </li>
+                  </ul>
+                  <div class="top-nav s-12 l-5">
+                     <ul class="top-ul chevron">
+                        <li><a href="/trip/contact">Contact</a>
+                        </li>
+                        <li>
+                           <a>Services</a>
+                           <ul>
+                              <li><a href="{% static 'login/./Services/index.html' %}">Mess</a>
+                              </li>
+
+                              <li><a href="{% static 'login/./Services/index.html' %}">Tiffin</a>
+                              </li>
+
+                              <li>
+                                 <a href="{% static 'login/./Services/index.html' %}">Catering</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><a href="/login">Login</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <div id="head">
+            <div class="line">
+               <h1>Become A Vendor</h1>
+            </div>
+         </div>
+         <div id="content" class="left-align contact-page">
+            <div class="line">
+               <div class="margin">
+                  <div class="s-12 l-12">
+                     <h2>Apply For Vendorship:</h2>
+                     <form class="customform" action="">
+
+                        <div class="s-12 l-12" style="display:flex;">
+                           <input style="margin-right:10px;" name="" placeholder="Your Name" title="Name" type="text" />
+                           <input  name="" placeholder="Your Surname" title="Surname" type="text" />
+                        </div>
+
+                        <div class="s-12 l-12"><input name="" placeholder="Phone No. " title="mail" type="text" /></div>
+                        <div class="s-12 l-12"><input name="" placeholder="Contact Mail" title="Your e-mail" type="text" /></div>
+                        <div class="s-12"><textarea placeholder="Your Address" name="" rows="5"></textarea></div>
+                        <div class="s-12 m-6 l-4"><button type="submit">Submit Button</button></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- MAP -->
+         <div id="map-block">
+         </div>
+
+         <div id="fourth-block">
+            <div class="line">
+               <div id="owl-demo2" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <h2>Vendor 1</h2>
+                     <p class="s-12 m-12 l-8 center">Comments from vendors on our services.</p>
+                  </div>
+                  <div class="item">
+                     <h2>Vendor 2</h2>
+                     <p class="s-12 m-12 l-8 center">Comments from vendors on our services.</p>
+                  </div>
+                  <div class="item">
+                     <h2>Vendor 3</h2>
+                     <p class="s-12 m-12 l-8 center">Comments from vendors on our services.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FOOTER -->
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Copyright 2017 Eatupzz
+               </p>
+            </div>
+            <div class="s-12 l-6">
+               <p class="right">
+                  <a class="right" href="http://www.companyweb.com" title="Eatupzz">Depeloped by Eatupzz</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+      <script type="text/javascript" src="{% static 'login/owl-carousel/owl.carousel.js' %}"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {
+           $("#owl-demo").owlCarousel({
+            slideSpeed : 300,
+            autoPlay : true,
+            navigation : false,
+            pagination : false,
+            singleItem:true
+           });
+           $("#owl-demo2").owlCarousel({
+            slideSpeed : 300,
+            autoPlay : true,
+            navigation : false,
+            pagination : true,
+            singleItem:true
+           });
+         });
+
+
+      </script>
+   </body>
+</html>

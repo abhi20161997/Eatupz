@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Eatupzz</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'login/css/components.css' %}">
+      <link rel="stylesheet" href="{% static 'login/css/responsee.css' %}">
+      <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.theme.css' %}">
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'login/css/template-style.css' %}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="{% static 'login/js/jquery-1.8.3.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/jquery-ui.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/modernizr.js' %}"></script>
+      <script type="text/javascript" src="{% static 'login/js/responsee.js' %}"></script>
+      <!--[if lt IE 9]>
+	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
+      <script>
+      function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("entirewrap").style.display = "block";
+      }
+      </script>
+      <style>
+      #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 150px;
+          height: 150px;
+          margin: -75px 0 0 -75px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+      #entirewrap{
+        display: none;
+      }
+
+      </style>
+   </head>
+   <body class="size-1140" onload="showPage()">
+     <div id="loader"></div>
+     <div id="entirewrap">
+      <header>
+         <nav>
+            <div class="line">
+               <div class="top-nav">
+                  <div class="logo hide-l">
+                     <a href="login./index.html">EATUPZZ<br /><strong>LOGO</strong></a>
+                  </div>
+                  <p class="nav-text">Menu</p><!--Responsive title for Nav-->
+                  <div class="top-nav s-12 l-5">
+                     <ul class="right top-ul chevron">
+                        <li><a href="/trip/./index">Home</a>
+                        </li>
+                        <li><a href="/trip/./bevendor">Be A vendor</a>
+                        </li>
+                        <li><a href="/trip/./fooddel">Food Delivery</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul class="s-12 l-2">
+                     <li class="logo hide-s hide-m">
+                        <a href="/trip/./index">EATUPZZ <br /><strong>LOGO</strong></a>
+                     </li>
+                  </ul>
+                  <div class="top-nav s-12 l-5">
+                     <ul class="top-ul chevron">
+                        <li><a href="/trip/./contact">Contact</a>
+                        </li>
+                        <li>
+                           <a>Services</a>
+                           <ul>
+                             <li><a href="{% static 'login/./Services/index.html' %}">Mess</a>
+                             </li>
+
+                             <li><a href="{% static 'login/./Services/index.html' %}">Tiffin</a>
+                             </li>
+
+                             <li>
+                                <a href="{% static 'login/./Services/index.html' %}">Catering</a>
+                             </li>
+                           </ul>
+                        </li>
+                        {% if user.is_authenticated%}
+                        <li><a href="#">{{user.username}}</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        {% else %}
+                        <li><a href="/login">Login</a>
+                        {% endif %}
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <!-- CAROUSEL -->
+         <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+               <div class="item">
+                  <img src="{% static 'login/img/back.png' %}" alt="">
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9">
+                           <h2>Company 1</h2>
+                        </div>
+                        <div class="s-12 l-9">
+                           <p>Tagline
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="{% static 'login/img/back.png' %}" alt="">
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9">
+                           <h2>Company 2</h2>
+                        </div>
+                        <div class="s-12 l-9">
+                           <p>Tagline</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="{% static 'login/img/back.png' %}" alt="">
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9">
+                           <h2>Company 3</h2>
+                        </div>
+                        <div class="s-12 l-9">
+                           <p>Tagline</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="{% static 'login/img/back.png' %}" alt="">
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9">
+                           <h2>Company 4</h2>
+                        </div>
+                        <div class="s-12 l-9">
+                           <p>Tagline
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="first-block">
+            <div class="line">
+               <h2>We Promise</h2>
+               <p class="subtitile">Note : We Have to buy better icons. Or gfx tem has to make some.
+               </p>
+               <div class="margin">
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon2x"></i>
+                     <h4>Trusted Vendors</h4>
+
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon2x"></i>
+                     <h4>No Minimum Order</h4>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon2x"></i>
+                     <h4>Fast Delivery</h4>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon2x"></i>
+                     <h4>Secure Payment</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="second-block">
+            <div class="line">
+               <div class="margin-bottom">
+                  <div class="margin">
+                     <article class="s-12 l-8 center">
+                        <h1>Today's Chef's Special</h1>
+                        <p class="margin-bottom">Use Jinja for a dynamic description.(for abhijit)
+                        </p>
+                        <a class="button s-12 l-4 center" href="#">Have A look</a>
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="third-block">
+            <div class="line">
+               <h2>PICS</h2>
+               <p class="subtitile">Display pics of the various service providers. Clicking on each one takes them to their page
+               </p>
+               <div class="margin">
+                  <div class="s-12 m-6 l-3">
+                     <img src="{% static 'logic/img/picTdis.jpg' %}" alt="alternative text">
+                     <p class="subtitile">Vendor 1
+                     </p>
+                  </div>
+                  <div class="s-12 m-6 l-3">
+                     <img src="{% static 'login/img/picTdis.jpg' %}" alt="alternative text">
+                     <p class="subtitile">Vendor 2</p>
+                  </div>
+                  <div class="s-12 m-6 l-3">
+                     <img src="{% static 'login/img/picTdis.jpg' %}" alt="alternative text">
+                     <p class="subtitile">Vendor 3</p>
+                  </div>
+                  <div class="s-12 m-6 l-3">
+                     <img src="{% static 'login/img/picTdis.jpg' %}" alt="alternative text">
+                     <p class="subtitile">Vendor 4</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="fourth-block">
+            <div class="line">
+               <div id="owl-demo2" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <h2>From Customers</h2>
+                     <p class="s-12 m-12 l-8 center">Use for some good customer reviews or stories.
+                     </p>
+                  </div>
+                  <div class="item">
+                     <h2>From Vendors</h2>
+                     <p class="s-12 m-12 l-8 center">Use for some good vendor reviews</p>
+                  </div>
+                  <div class="item">
+                     <h2>From the owner</h2>
+                     <p class="s-12 m-12 l-8 center">Write something inspiring. Note: For footers we can add facebook twitter favicons.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Copyright 2017 Eatupzz
+               </p>
+            </div>
+            <div class="s-12 l-6">
+               <p class="right">
+                  <a class="right" href="http://www.companyweb.com" title="Eatupzz">Depeloped by Eatupzz</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+    </div>
+      <script type="text/javascript" src="{% static 'login/owl-carousel/owl.carousel.js' %}"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {
+           $("#owl-demo").owlCarousel({
+            slideSpeed : 300,
+            autoPlay : true,
+            navigation : false,
+            pagination : false,
+            singleItem:true
+           });
+           $("#owl-demo2").owlCarousel({
+            slideSpeed : 300,
+            autoPlay : true,
+            navigation : false,
+            pagination : true,
+            singleItem:true
+           });
+         });
+
+      </script>
+   </body>
+
+</html>
+1
